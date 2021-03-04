@@ -13,7 +13,6 @@ export const DistributorList = () => {
 
     return (
         <>
-        {console.log(flowerNurseries, distributors)}
         <h2>Distributors</h2>
         <div className="distributors">
             {distributors.map(distributor => {
