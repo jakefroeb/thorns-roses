@@ -3,7 +3,7 @@ export const Distributor = ({distributor, matchingFns}) => {
                 <h3>Distributor : {distributor.name}</h3>
                 <h4>Flowers</h4>
                 <ul>
-                    {matchingFns.map(fnarray => fnarray.map(fn => <li key={fn.id}>flower: {fn.flower.color} {fn.flower.species}, price: {(fn.price * distributor.pricemarkup *100).toFixed(2)}</li>))}
+                    {matchingFns.map(fnarray => fnarray.map(fn => <li key={fn.id}>flower: {fn.flower.color} {fn.flower.species}, price: {(fn.price * distributor.pricemarkup).toFixed(2)}</li>))}
                 </ul>
                 <h4>Retailers</h4>
                 <ul>

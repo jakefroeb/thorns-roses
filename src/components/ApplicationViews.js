@@ -4,6 +4,7 @@ import { DistributorList } from "./distributors/DistributorList"
 import { DistributorProvider } from "./distributors/DistributorProvider"
 import { NurseryList } from "./nurseries/NurseryList"
 import { NurseryProvider } from "./nurseries/NurseryProvider"
+import { RetailerList } from "./retailers/RetailerList"
 
 export const ApplicationViews = () =>{
     return(
@@ -21,7 +22,11 @@ export const ApplicationViews = () =>{
                 </NurseryProvider>
             </Route> 
             <Route exact path="/retailers">
-                <></>
+                <NurseryProvider>
+                    <DistributorProvider>
+                        <RetailerList/>
+                    </DistributorProvider>
+                </NurseryProvider>
             </Route> 
         </>
     )
