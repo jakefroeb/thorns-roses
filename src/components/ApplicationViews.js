@@ -1,5 +1,6 @@
 import React from "react"
 import { Route } from "react-router-dom"
+import { CustomerProvider } from "./customers/CustomerProvider"
 import { DistributorList } from "./distributors/DistributorList"
 import { DistributorProvider } from "./distributors/DistributorProvider"
 import { NurseryList } from "./nurseries/NurseryList"
@@ -22,11 +23,13 @@ export const ApplicationViews = () =>{
                 </NurseryProvider>
             </Route> 
             <Route exact path="/retailers">
-                <NurseryProvider>
-                    <DistributorProvider>
-                        <RetailerList/>
-                    </DistributorProvider>
-                </NurseryProvider>
+                <CustomerProvider>
+                    <NurseryProvider>
+                        <DistributorProvider>
+                            <RetailerList/>
+                        </DistributorProvider>
+                    </NurseryProvider>
+                </CustomerProvider>
             </Route> 
         </>
     )
