@@ -1,6 +1,5 @@
-export const CartCard = ({color, species, price, amount, flowerId}) => (
+export const CartCard = ({flower}) => (
     <>
-        {console.log(color, species,amount,price,flowerId)}
-        <div key={flowerId}>{color} {species} {amount} {price}</div>
+        <div key={flower.flowerId}>{flower.color} {flower.species} {flower.amount} ${flower.price.toFixed(2)}</div>
     </>
 )

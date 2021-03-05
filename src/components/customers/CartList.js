@@ -19,6 +19,7 @@ export const CartList = () => {
     let color
     let flowerAmount = 0 
     let sendFlowerId
+    let flowerDisplayArray = []
 
     return (
         <>
@@ -38,14 +39,16 @@ export const CartList = () => {
                     sendFlowerId= fci.flower.id
                 })
                 flowerId = CI.flower.id
-                return <CartCard key={flowerId}
-                price={price}
-                species={species}
-                color={color}
-                flowerId={sendFlowerId}
-                amount={flowerAmount}/>
-                
-                }})}
+                console.log(flowerId, color, species, flowerAmount, price.toFixed(2))
+                flowerDisplayArray.push({
+                    flowerId: sendFlowerId,
+                    price: price,
+                    species: species,
+                    color: color,
+                    amount: flowerAmount,
+                })}})}
+                {flowerDisplayArray.map(flower => <CartCard key={flower.flowerId}
+                                                            flower= {flower}/>)}
         </div>
         </>
     )
