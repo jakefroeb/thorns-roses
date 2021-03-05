@@ -3,14 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router } from "react-router-dom"
-import { NavBar } from './components/nav/NavBar';
-import { ApplicationViews } from './components/ApplicationViews';
+import { ThornsAndRoses } from './components/ThornsAndRoses';
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <NavBar/>
-      <ApplicationViews/>
+      <ThornsAndRoses/>
     </Router>
   </React.StrictMode>,
   document.getElementById('root')
