@@ -1,5 +1,6 @@
 import React from "react"
 import { Route } from "react-router-dom"
+import { CartList } from "./customers/CartList"
 import { CustomerProvider } from "./customers/CustomerProvider"
 import { DistributorList } from "./distributors/DistributorList"
 import { DistributorProvider } from "./distributors/DistributorProvider"
@@ -31,6 +32,11 @@ export const ApplicationViews = () =>{
                     </NurseryProvider>
                 </CustomerProvider>
             </Route> 
+            <Route exact path="/cart">
+                <CustomerProvider>
+                    <CartList/>
+                </CustomerProvider>
+            </Route>
         </>
     )
 }

@@ -4,7 +4,7 @@ import { CustomerContext } from "../customers/CustomerProvider"
 export const Retailer = ({distributor, matchingFns, retailer}) => {
     const {addCartItem} = useContext(CustomerContext)
     const purchaseFlower = (e) => {
-        let flowerId = parseInt(e.target.value.split(","))
+        let flowerId = parseInt(e.target.value.split(",")[0])
         let price = parseFloat(e.target.value.split(",")[1])
         let cartObj = {
             customerId : parseInt(localStorage.getItem("thorns_customer")),
